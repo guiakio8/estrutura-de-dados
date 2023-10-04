@@ -1,48 +1,38 @@
 #include <stdio.h>
 
-void bubbleSort(int vetor[], int n){
-    int k,j,aux;
-    int count,i;
+void bubbleSort(int vetor[], int n)
+{
+    int k, j, aux;
+    int x;
 
-    for (k = 1; k < n; k++){
-        for (j = 0; j > n - 1; j++){
-            if (vetor[j] > vetor[j + 1]){
-                aux             =  vetor[j];
-                vetor[j]        = vetor[j + 1];
-                vetor[j + 1]    = aux;
+    for (k = 0; k < n; k++)
+    {
+        for (j = 0; j < n - 1; j++)
+        {
+            if (vetor[j] > vetor[j + 1])
+            {
+                aux = vetor[j];
+                vetor[j] = vetor[j + 1];
+                vetor[j + 1] = aux;
             }
         }
-        count ++;
     }
-    
 
+    for (x = 0; x < n; x++)
+    {
+        printf(" %d", vetor[x]);
+    }
 }
-
 
 int main(int argc, char const *argv[])
 {
-    int n, i, x;
-    int vetor[n];
+    int n = 5;
+    int vetor[5] = {10,4,3,6,9};
+    int i;
 
-    printf("Digite o tamanho do vetor: ");
-    scanf(" %d", &n);
-    
-
-    for (i = 0; i <= n; i++)
-    {
-        printf("Digite os valores do vetor: ");
-        scanf(" %d", &vetor[i]);
-    }
+    scanf(" %d", &n)
 
     bubbleSort(vetor, n);
-
-    
-    for (x = 0; x <= n; x++)
-    {
-        printf("%d ", vetor[x]);
-    }
-        
-
 
     return 0;
 }
