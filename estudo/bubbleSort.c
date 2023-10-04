@@ -14,10 +14,6 @@ void bubbleSort(int vetor[], int n){
         }
         count ++;
     }
-    for (i = 0; i < count; i++)
-    {
-        printf(" %d", vetor[i]);
-    }
     
 
 }
@@ -25,20 +21,26 @@ void bubbleSort(int vetor[], int n){
 
 int main(int argc, char const *argv[])
 {
-    int n, i;
+    int n, i, x;
     int vetor[n];
 
     printf("Digite o tamanho do vetor: ");
     scanf(" %d", &n);
-    n - 1;
+    
 
-    for (i = 0; i < n; i++)
+    for (i = 0; i <= n; i++)
     {
         printf("Digite os valores do vetor: ");
         scanf(" %d", &vetor[i]);
     }
 
     bubbleSort(vetor, n);
+
+    
+    for (x = 0; x <= n; x++)
+    {
+        printf("%d ", vetor[x]);
+    }
         
 
 
