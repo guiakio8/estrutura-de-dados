@@ -7,10 +7,10 @@ void bubbleSort(int vetor[], int n)
 
     for (k = 0; k < n; k++) // loop que percorre cada espaço do array
     {
-        for (j = 0; j < n - 1; j++) // Aqui o codigo ele vai determinar se ele vai fazer a ordenação
-        {                           // de forma crescente ou decrescente
-            if (vetor[j] > vetor[j + 1])
-            {
+        for (j = 0; j < n - 1; j++) 
+        {                           
+            if (vetor[j] < vetor[j + 1])    // Aqui o codigo ele vai determinar se ele vai fazer a ordenação
+            {                               // de forma crescente ou decrescente
                 aux = vetor[j];
                 vetor[j] = vetor[j + 1];
                 vetor[j + 1] = aux;

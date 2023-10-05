@@ -1,44 +1,38 @@
 #include <stdio.h>
 
-void bubble(int vetor[], int tam)
-{
-    int pos, obj, aux;
+void bubble(int vetor[], int n){
+    int k,j,aux;
     int i;
 
-    for (pos = 0; pos < tam; pos++)
+    for (k = 0; k < n; k++)
     {
-        for (obj = 0; obj < tam - 1; obj++)
+        for (j = 0; j < n - 1; j++)
         {
-            if (vetor[obj] > vetor[obj + 1])
+            if (vetor[j] < vetor[j + 1])
             {
-                aux = vetor[obj];
-                vetor[obj] = vetor[obj + 1];
-                 vetor[obj + 1] = aux;
+                aux = vetor[j];
+                vetor[j] = vetor[j + 1];
+                vetor[j + 1] = aux;
             }
+            
         }
+        
     }
-    for (i = 0; i < tam; i++)
+    for (i = 0; i < n; i++)
     {
         printf(" %d", vetor[i]);
     }
+    
 }
+
 
 int main()
 {
-    int tam, i;
+    int vetor[7] = {9,5,12,3,4,8,34};
+    int n = 7;
 
-    printf("Tamanho: ");
-    scanf(" %d", &tam);
+    bubble(vetor, n);
 
-    int vetor[tam];
-
-    for (i = 0; i < tam; i++)
-    {
-        printf("Array: ");
-        scanf(" %d", &vetor[i]);
-    }
-    
-    bubble(vetor, tam);
 
     return 0;
 }
