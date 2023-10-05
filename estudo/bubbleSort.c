@@ -5,10 +5,10 @@ void bubbleSort(int vetor[], int n)
     int k, j, aux;
     int x;
 
-    for (k = 0; k < n; k++)
+    for (k = 0; k < n; k++) // loop que percorre cada espaço do array
     {
-        for (j = 0; j < n - 1; j++)
-        {
+        for (j = 0; j < n - 1; j++) // Aqui o codigo ele vai determinar se ele vai fazer a ordenação
+        {                           // de forma crescente ou decrescente
             if (vetor[j] > vetor[j + 1])
             {
                 aux = vetor[j];
@@ -24,15 +24,25 @@ void bubbleSort(int vetor[], int n)
     }
 }
 
-int main(int argc, char const *argv[])
+int main()
 {
-    int n = 5;
-    int vetor[5] = {10,4,3,6,9};
+    int n;
     int i;
 
-    scanf(" %d", &n)
+    printf("Valor n: ");
+    scanf(" %d", &n);
+    
+    int vetor[n];
 
+    for (i = 0; i < n; i++)
+    {
+        printf("Valor vetor: ");
+        scanf(" %d", &vetor[i]);
+    }
+    
     bubbleSort(vetor, n);
 
     return 0;
 }
+
+
