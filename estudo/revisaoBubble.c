@@ -18,7 +18,7 @@ void bubble(int vetor[], int n)
     }
 }
 
-// Metodo main
+// Metodo main teste
 int main(int argc, char const *argv[])
 {
     int vetor[5] = {4,8,2,5,0};
